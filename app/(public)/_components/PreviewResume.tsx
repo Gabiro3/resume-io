@@ -7,6 +7,7 @@ import SummaryPreview from "@/components/preview/SummaryPreview";
 import EducationPreview from "@/components/preview/EducationPreview";
 import ExperiencePreview from "@/components/preview/ExperiencePreview";
 import SkillPreview from "@/components/preview/SkillPreview";
+import ActivitiesPreview from "@/components/preview/ActivitiesPreview";
 
 const PreviewResume = (props: {
   isLoading: boolean;
@@ -37,6 +38,9 @@ const PreviewResume = (props: {
 
       {/* {Educational Info} */}
       <EducationPreview isLoading={isLoading} resumeInfo={resumeInfo} />
+
+      {/* {Activities Info} */}
+      <ActivitiesPreview isLoading={isLoading} resumeInfo={resumeInfo} />
 
       {/* {Skills} */}
       <SkillPreview isLoading={isLoading} resumeInfo={resumeInfo} />

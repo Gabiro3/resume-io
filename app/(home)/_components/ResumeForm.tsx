@@ -8,6 +8,7 @@ import SummaryForm from "./forms/SummaryForm";
 import ExperienceForm from "./forms/ExperienceForm";
 import EducationForm from "./forms/EducationForm";
 import SkillsForm from "./forms/SkillsForm";
+import ActivityForm from "./forms/ActivityForm";
 
 const ResumeForm = () => {
   const { resumeInfo } = useResumeContext();
@@ -78,8 +79,11 @@ const ResumeForm = () => {
           {/* {Eduncational Info} */}
           {activeFormIndex === 4 && <EducationForm handleNext={handleNext} />}
 
+          {/* {Eduncational Info} */}
+          {activeFormIndex === 5 && <ActivityForm handleNext={handleNext} />}
+
           {/* {Skills} */}
-          {activeFormIndex === 5 && <SkillsForm />}
+          {activeFormIndex === 6 && <SkillsForm />}
         </div>
       </div>
     </div>

@@ -22,6 +22,15 @@ export type EducationType = {
   description: string | null;
 };
 
+export type ActivityType = {
+  id?: number;
+  docId?: number | null;
+  activityName: string | null;
+  startDate: string | null;
+  endDate: string | null;
+  description: string | null;
+};
+
 export type SkillType = {
   id?: number;
   docId?: number | null;
@@ -54,6 +63,7 @@ export type ResumeDataType = {
   summary: string | null;
   experiences?: ExperienceType[] | null;
   educations?: EducationType[] | null;
+  activities?: ActivityType[] | null;
   skills?: SkillType[] | null;
   updatedAt?: string;
 };
