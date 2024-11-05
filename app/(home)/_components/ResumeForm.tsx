@@ -79,9 +79,6 @@ const ResumeForm = () => {
           {/* {Eduncational Info} */}
           {activeFormIndex === 4 && <EducationForm handleNext={handleNext} />}
 
-          {/* {Eduncational Info} */}
-          {activeFormIndex === 5 && <ActivityForm handleNext={handleNext} />}
-
           {/* {Skills} */}
           {activeFormIndex === 6 && <SkillsForm />}
         </div>

@@ -18,6 +18,7 @@ import {
   experienceTable,
   personalInfoTable,
   skillsTable,
+  activityTable
 } from "@/db/schema";
 
 const documentRoute = new Hono()
@@ -90,6 +91,7 @@ const documentRoute = new Hono()
           personalInfo,
           experience,
           education,
+          activity,
           skills,
         } = c.req.valid("json");
         const userId = user.id;
@@ -119,6 +121,7 @@ const documentRoute = new Hono()
           if (summary) resumeUpdate.summary = summary;
           if (themeColor) resumeUpdate.themeColor = themeColor;
           if (status) resumeUpdate.status = status;
+          if (activity) resumeUpdate.activity = activity;
           if (currentPosition)
             resumeUpdate.currentPosition = currentPosition || 1;
 

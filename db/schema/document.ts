@@ -12,6 +12,7 @@ import { personalInfoTable, personalInfoTableSchema } from "./personal-info";
 import { experienceTable, experienceTableSchema } from "./experience";
 import { educationTable, educationTableSchema } from "./education";
 import { skillsTable, skillsTableSchema } from "./skills";
+import { activityTableSchema, activityTable } from "./activity";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -40,6 +41,7 @@ export const documentRelations = relations(documentTable, ({ one, many }) => {
     personalInfo: one(personalInfoTable),
     experiences: many(experienceTable),
     educations: many(educationTable),
+    activities: many(activityTable),
     skills: many(skillsTable),
   };
 });
@@ -67,6 +69,7 @@ export const updateCombinedSchema = z.object({
   currentPosition: createDocumentTableSchema.shape.currentPosition.optional(),
   personalInfo: personalInfoTableSchema.optional(),
   education: z.array(educationTableSchema).optional(),
+  activity: z.array(activityTableSchema).optional(),
   experience: z.array(experienceTableSchema).optional(),
   skills: z.array(skillsTableSchema).optional(),
 });

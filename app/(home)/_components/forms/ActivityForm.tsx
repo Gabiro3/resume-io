@@ -77,7 +77,7 @@ const ActivityForm = (props: { handleNext: () => void }) => {
         {
           currentPosition: currentNo,
           thumbnail: thumbnail,
-          education: activityList,
+          activity: activityList,
         },
         {
           onSuccess: () => {
