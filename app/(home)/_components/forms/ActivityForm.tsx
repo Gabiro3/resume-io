@@ -138,7 +138,7 @@ const ActivityForm = (props: { handleNext: () => void }) => {
                 <div className="col-span-2">
                   <Label className="text-sm">Project/Honors title</Label>
                   <Input
-                    name="universityName"
+                    name="activityName"
                     placeholder=""
                     required
                     value={item?.activityName || ""}
