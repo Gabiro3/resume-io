@@ -24,7 +24,7 @@ const ActivityForm = (props: { handleNext: () => void }) => {
 
   const { mutateAsync, isPending } = useUpdateDocument();
 
-  const [activityList, setEducationList] = React.useState(() => {
+  const [activityList, setActivityList] = React.useState(() => {
     return resumeInfo?.activities?.length
       ? resumeInfo.activities
       : [initialState];
@@ -44,24 +44,24 @@ const ActivityForm = (props: { handleNext: () => void }) => {
   ) => {
     const { name, value } = e.target;
 
-    setEducationList((prevState) => {
-      const newEducationList = [...prevState];
-      newEducationList[index] = {
-        ...newEducationList[index],
+    setActivityList((prevState) => {
+      const newActivityList = [...prevState];
+      newActivityList[index] = {
+        ...newActivityList[index],
         [name]: value,
       };
-      return newEducationList;
+      return newActivityList;
     });
   };
 
   const addNewActivity = () => {
-    setEducationList([...activityList, initialState]);
+    setActivityList([...activityList, initialState]);
   };
 
   const removeActivity = (index: number) => {
     const updatedActivity = [...activityList];
     updatedActivity.splice(index, 1);
-    setEducationList(updatedActivity);
+    setActivityList(updatedActivity);
   };
 
   const handleSubmit = useCallback(
@@ -83,14 +83,14 @@ const ActivityForm = (props: { handleNext: () => void }) => {
           onSuccess: () => {
             toast({
               title: "Success",
-              description: "Education updated successfully",
+              description: "Activity updated successfully",
             });
             handleNext();
           },
           onError() {
             toast({
               title: "Error",
-              description: "Failed to update education",
+              description: "Failed to update activity",
               variant: "destructive",
             });
           },

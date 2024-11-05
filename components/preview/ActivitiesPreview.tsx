@@ -34,24 +34,19 @@ const ActivitiesPreview: FC<PropsType> = ({ resumeInfo, isLoading }) => {
       />
 
       <div className="flex flex-col gap-2 min-h-9">
-        {resumeInfo?.educations?.map((education, index) => (
+        {resumeInfo?.activities?.map((activity, index) => (
           <div key={index}>
             <h5 className="text-sm font-bold" style={{ color: themeColor }}>
-              {education?.universityName}
+              {activity?.activityName}
             </h5>
             <div className="flex items-start justify-between">
-              <h5 className="text-[13px]">
-                {education?.degree}
-                {education?.degree && education?.major && " in "}
-                {education?.major}
-              </h5>
               <span className="text-[13px]">
-                {education?.startDate}
-                {education?.startDate && " - "}
-                {education?.endDate}
+                {activity?.startDate}
+                {activity?.startDate && " - "}
+                {activity?.endDate}
               </span>
             </div>
-            <p className="text-[13px] my-2">{education?.description}</p>
+            <p className="text-[13px] my-2">{activity?.description}</p>
           </div>
         ))}
       </div>
