@@ -157,7 +157,6 @@ const PersonalInfoForm = (props: { handleNext: () => void }) => {
               <Label className="text-sm">Phone number</Label>
               <Input
                 name="phonenumber"
-                required
                 autoComplete="off"
                 placeholder=""
                 value={personalInfo?.phone || ""}

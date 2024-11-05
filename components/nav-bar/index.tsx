@@ -13,10 +13,10 @@ const NavBar = () => {
       <div className="w-full flex items-center justify-center h-auto bg-black">
         <div className="max-w-6xl mx-auto py-2">
           <p className="text-white text-sm">
-            <b>Subcribe to the channel 🙏</b>! Boost your resume with CVbuild.ai
-            Resume Course out{" "}
+            <b>Subcribe to the channel 🙏</b>! Boost your resume with Crafted CV
+            at{" "}
             <a className="inline-flex items-center gap-1 font-bold text-primary">
-              CVbuild.ai Course
+              Crafted CV Platform
               <ExternalLink size="14px" />
             </a>
           </p>
@@ -25,7 +25,7 @@ const NavBar = () => {
       <div className="w-full mx-auto max-w-7xl p-3 px-5 flex items-center justify-between ">
         <div className="flex items-center flex-1 gap-9">
           <div>
-            <h5 className="font-black text-lg text-primary">CVbuild.ai</h5>
+            <h5 className="font-black text-lg text-primary">Crafted CV</h5>
           </div>
 
           <div className="hidden lg:flex">

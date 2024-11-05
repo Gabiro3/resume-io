@@ -12,7 +12,7 @@ export default function Home() {
             <div className="p-2 h-5 shrink-0 flex items-center text-xs justify-center text-white bg-primary rounded-full">
               New
             </div>
-            Subscribe to Techwithemma
+            Subscribe to our newsletter
             <ChevronRight className="w-4 h-4" />
           </div>
 
