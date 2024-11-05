@@ -84,6 +84,7 @@ const ResumeForm = () => {
 
           {/* {Skills} */}
           {activeFormIndex === 6 && <SkillsForm />}
+          
         </div>
       </div>
     </div>

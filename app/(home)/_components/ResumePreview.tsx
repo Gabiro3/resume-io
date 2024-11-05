@@ -7,6 +7,7 @@ import SummaryPreview from "@/components/preview/SummaryPreview";
 import ExperiencePreview from "@/components/preview/ExperiencePreview";
 import EducationPreview from "@/components/preview/EducationPreview";
 import SkillPreview from "@/components/preview/SkillPreview";
+import ActivitiesPreview from "@/components/preview/ActivitiesPreview";
 
 const ResumePreview = () => {
   const { resumeInfo, isLoading } = useResumeContext();
@@ -36,6 +37,9 @@ const ResumePreview = () => {
 
       {/* {Professional Exp} */}
       <ExperiencePreview isLoading={isLoading} resumeInfo={resumeInfo} />
+
+      {/* {Activities} */}
+      <ActivitiesPreview isLoading={isLoading} resumeInfo={resumeInfo} />
 
       {/* {Skills} */}
       <SkillPreview isLoading={isLoading} resumeInfo={resumeInfo} />
