@@ -39,11 +39,11 @@ const PreviewResume = (props: {
       {/* {Educational Info} */}
       <EducationPreview isLoading={isLoading} resumeInfo={resumeInfo} />
 
-      {/* {Activities Info} */}
-      <ActivitiesPreview isLoading={isLoading} resumeInfo={resumeInfo} />
-
       {/* {Skills} */}
       <SkillPreview isLoading={isLoading} resumeInfo={resumeInfo} />
+
+      {/* {Activities Info} */}
+      <ActivitiesPreview isLoading={isLoading} resumeInfo={resumeInfo} />
     </div>
   );
 };
