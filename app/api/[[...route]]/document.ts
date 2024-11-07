@@ -385,6 +385,7 @@ const documentRoute = new Hono()
             ne(documentTable.status, "archived")
           )
         );
+      console.log(documents);
       return c.json({
         success: true,
         data: documents,
@@ -425,6 +426,7 @@ const documentRoute = new Hono()
             experiences: true,
             educations: true,
             skills: true,
+            activities: true,
           },
         });
         return c.json({
