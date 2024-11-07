@@ -464,6 +464,7 @@ const documentRoute = new Hono()
             experiences: true,
             educations: true,
             skills: true,
+            activities: true,
           },
         });
 
