@@ -253,6 +253,37 @@ const documentRoute = new Hono()
               }
             }
           }
+
+          if (activity && Array.isArray(activity)) {
+            const existingActivities = await trx
+              .select()
+              .from(activityTable)
+              .where(eq(activityTable.docId, existingDocument.id));
+
+            const existingActivitiesMap = new Set(
+              existingActivities.map((activity) => activity.id)
+            );
+
+            for (const part of activity) {
+              const { id, ...data } = part;
+              if (id !== undefined && existingActivitiesMap.has(id)) {
+                await trx
+                  .update(activityTable)
+                  .set(data)
+                  .where(
+                    and(
+                      eq(activityTable.docId, existingDocument.id),
+                      eq(activityTable.id, id)
+                    )
+                  );
+              } else {
+                await trx.insert(activityTable).values({
+                  docId: existingDocument.id,
+                  ...data,
+                });
+              }
+            }
+          }
         });
 
         return c.json(
